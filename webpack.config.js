@@ -1,4 +1,6 @@
-const path = require('path'); // eslint-disable-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   // ... other webpack configuration options
@@ -9,4 +11,9 @@ module.exports = {
       fs: require.resolve('graceful-fs'),
     },
   },
+  plugins: [
+    new webpack.ProvidePlugin({
+      process: 'process/browser',
+    }),
+  ],
 };
