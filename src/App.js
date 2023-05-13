@@ -1,6 +1,13 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* eslint-disable require-jsdoc */
+import React from 'react'; // Added import statement for React
 import logo from './logo.svg';
 import './App.css';
 
+/**
+ * Main application component.
+ * @return {JSX.Element} The rendered App component.
+ */
 function App() {
   return (
     <div className="App">
