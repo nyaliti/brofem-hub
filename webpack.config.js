@@ -8,7 +8,7 @@ module.exports = {
     fallback: {
       path: require.resolve('path-browserify'),
       net: require.resolve('net-browserify'),
-      fs: require.resolve('graceful-fs'),
+      fs: false,
     },
   },
   plugins: [
