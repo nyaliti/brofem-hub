@@ -1,6 +1,7 @@
 import React from 'react';
 import Login from './Login';
 import Register from './Register';
+import CreatePost from './CreatePost';
 
 const Navbar = () => {
   return (
@@ -13,7 +14,9 @@ const Navbar = () => {
         <li>
           <Register />
         </li>
-        <li>Create Post</li>
+        <li>
+          <CreatePost /> {/* Include the CreatePost component */}
+        </li>
       </ul>
     </nav>
   );
