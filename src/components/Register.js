@@ -1,15 +1,13 @@
 import React, {useState} from 'react';
 
-
 const Register = () => {
   const [email, setEmail] = useState('');
-
+  const [password, setPassword] = useState('');
 
   const handleRegister = (e) => {
     e.preventDefault();
     // Implement registration logic
   };
-
 
   return (
     <div>
@@ -32,6 +30,5 @@ const Register = () => {
     </div>
   );
 };
-
 
 export default Register;
