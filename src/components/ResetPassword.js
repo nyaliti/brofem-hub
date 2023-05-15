@@ -1,11 +1,15 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom';
 
 const ResetPassword = () => {
   const [email, setEmail] = useState('');
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Implement password reset logic
+    // Redirect to the reset confirmation page
+    history.push('/reset-confirmation');
   };
 
   return (
