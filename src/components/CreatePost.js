@@ -1,13 +1,20 @@
 import React, {useState} from 'react';
+import {useHistory} from 'react-router-dom/cjs/react-router-dom.min';
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     // Send the new blog post data to the server for creation
     // Clear the form fields
+    setTitle('');
+    setContent('');
+
+    // Redirect to home page
+    history.push('/');
   };
 
   return (
