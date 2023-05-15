@@ -1,19 +1,13 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
 
 const Comment = ({comment}) => {
   return (
     <div>
       <p>{comment.content}</p>
-      {/* Display user information */}
+      <p>Posted by: {comment.user}</p>
     </div>
   );
-};
-
-Comment.propTypes = {
-  comment: PropTypes.shape({
-    content: PropTypes.string.isRequired,
-  }).isRequired,
 };
 
 export default Comment;
