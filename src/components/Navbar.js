@@ -1,21 +1,21 @@
 import React from 'react';
-import Login from './Login';
-import Register from './Register';
-import CreatePost from './CreatePost';
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
   return (
     <nav>
       <ul>
-        <li>Home</li>
         <li>
-          <Login />
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <Register />
+          <Link to="/login">Login</Link>
         </li>
         <li>
-          <CreatePost /> {/* Include the CreatePost component */}
+          <Link to="/register">Register</Link>
+        </li>
+        <li>
+          <Link to="/create-post">Create Post</Link>
         </li>
       </ul>
     </nav>
