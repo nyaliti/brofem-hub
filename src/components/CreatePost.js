@@ -4,33 +4,26 @@ const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
 
-  const handleCreatePost = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    // Implement create post logic
-  };
-
-  const handleTitleChange = (e) => {
-    setTitle(e.target.value);
-  };
-
-  const handleContentChange = (e) => {
-    setContent(e.target.value);
+    // Send the new blog post data to the server for creation
+    // Clear the form fields
   };
 
   return (
     <div>
-      <h2>Create Post</h2>
-      <form onSubmit={handleCreatePost}>
+      <h2>Create a New Blog Post</h2>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Title"
           value={title}
-          onChange={handleTitleChange}
+          onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
           placeholder="Content"
           value={content}
-          onChange={handleContentChange}
+          onChange={(e) => setContent(e.target.value)}
         ></textarea>
         <button type="submit">Create Post</button>
       </form>
