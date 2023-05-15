@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Register from './components/Register';
 import CreatePost from './components/CreatePost';
 import Footer from './components/Footer'; // Import the Foote component
+import ContactUs from './components/ContactUs';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/register" component={Register} />
           <Route path="/create-post" component={CreatePost} />
         </Switch>
+        <ContactUs /> {/* Include the contactus component */}
         <Footer /> {/* Include the Footer coomponent */}
       </div>
     </Router>
