@@ -7,6 +7,7 @@ import Register from './components/Register';
 import CreatePost from './components/CreatePost';
 import Footer from './components/Footer'; // Import the Foote component
 import ContactUs from './components/ContactUs';
+import ResetPassword from './components/ResetPassword';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/create-post" component={CreatePost} />
+          <Route path="/reset-password" component={ResetPassword} />
         </Switch>
         <ContactUs /> {/* Include the contactus component */}
         <Footer /> {/* Include the Footer coomponent */}
