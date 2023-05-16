@@ -1,21 +1,19 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import {useAuth} from '../contexts/AuthContext';
+import AuthorDashboard from './AuthorDashboard';
+import AdminDashboard from './AdminDashboard';
 
-const Dashboard = ({posts, handleEdit, handleDelete}) => {
+const Dashboard = () => {
+  const {currentUser} = useAuth();
+
+  // Determine user role based on currentUser data
+  const userRole = currentUser ? currentUser.role : '';
+
   return (
     <div>
-      <h2>Dashboard</h2>
-      <h3>Your Blog Posts</h3>
-      <ul>
-        {posts.map((post) => (
-          <li key={post.id}>
-            <h4>{post.title}</h4>
-            <p>{post.content}</p>
-            <button onClick={() => handleEdit(post.id)}>Edit</button>
-            <button onClick={() => handleDelete(post.id)}>Delete</button>
-          </li>
-        ))}
-      </ul>
+      {userRole === 'author' && <AuthorDashboard />}
+      {userRole === 'admin' && <AdminDashboard />}
+      {/* Add other user roles and their corresponding components */}
     </div>
   );
 };
